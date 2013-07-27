@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Puritan:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -31,10 +31,24 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <div class="row">
-						<p><img src="SxSHead.png" ></p></a>
+						<p><img src="img/SxSHead.png" ></p></a>
         </div>
 
         <div class="container">
+        
+        
+    		<canvas id="AlbumScore" class="nav" width="600" height="600"
+				style="border:1px solid #000000;" >
+			</canvas>
+
+				<script>
+				var c=document.getElementById("AlbumScore");
+				var ctx=c.getContext("2d");
+					ctx.fillStyle="#000000";
+					ctx.fillRect(0,0,400,500);
+				</script>
+
+ <hr>
 
 <div class="tabbable tabs-left">
   <ul class="nav nav-tabs">
@@ -49,8 +63,11 @@
   </ul>
   <div class="tab-content">
    <div class="tab-pane active" id="tabAphexTwin">
-      <p> Come to Daddy= 8 <br>
-      	  Drukqs= 5
+      <p>Come to Daddy
+<!--Clicking on the album name needs to send numerical values to the javascript above that fills the canvas -->
+
+      <br>
+      	  Drukqs 
       </p>
     </div>
     <div class="tab-pane" id="tabBoardsOfCanada">

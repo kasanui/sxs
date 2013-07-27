@@ -11,20 +11,21 @@ footer {
 
 body {
 color: #000000;
-font-family: 'Puritan', sans-serif;
-}
-
-
-
-
-.black{
-
-color: #000000
+font-family: 'Habibi', serif;
+ font-size:24px;
 }
 
 
 
 
 
+a:link, a:visited, a:active, a:hover {
+ font-size:24px;
+ color: #000000 
+ }
 
 
+.nav {
+
+	float: right;
+ }
