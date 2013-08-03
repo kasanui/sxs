@@ -21,13 +21,19 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+                        $(document).ready(function() {
+                	      });
+    	 </script>
+        
+        
         <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <div class="row">
@@ -35,51 +41,108 @@
         </div>
 
         <div class="container">
+
+
+
+
+        <var Substance  </var>
+        <var Style </var>
+        
+        
+        
         
         <!-- This is the rectangle -->
-    		<canvas id="AlbumScore" class="nav" width="600" height="600"
+    		<canvas id="Rectangle" class="nav" width="600" height="600"
 				style="border:0px solid #000000;" >
 			</canvas>
 
-				<script>
-				var c=document.getElementById("AlbumScore");
+
+
+
+
+			<script>				
+				var c=document.getElementById("Rectangle");
 				var ctx=c.getContext("2d");
 					ctx.fillStyle="#000000";
 					ctx.fillRect(0,0,400,500);
-				</script>
+			</script>
 
 
 
+
+		
+		
+		
+		
  <hr>
 
 <div class="tabbable tabs-left">
   <ul class="nav nav-tabs">
   
-<li class="active"> <a href="#tabAphexTwin" data-toggle="tab" >Aphex Twin</a>
-</li>
-  <li><a href="#tabBoardsOfCanada" data-toggle="tab">Boards of Canada</a></li>
-  <li><a href="#tabSigurRos" data-toggle="tab" class="chris">Sigur Ros</a></li>
-  <li><a href="#tabTomWaits" data-toggle="tab">Tom Waits</a></li>
+	<li class="active"> <a href="#tabAphexTwin" data-toggle="tab" >Aphex Twin</a></li>
+  	<li><a href="#tabBoardsOfCanada" data-toggle="tab">Boards of Canada</a></li>
+  	<li><a href="#tabSigurRos" data-toggle="tab" class="chris">Sigur Ros</a></li>
+  	<li><a href="#tabTomWaits" data-toggle="tab">Tom Waits</a></li>
+
+
+
 
 
   </ul>
   <div class="tab-content">
    <div class="tab-pane active" id="tabAphexTwin">
-      <p>Come to Daddy
-<!--Clicking on the album name needs to send numerical values to the javascript above that fills the canvas -->
-
-      <br>
-      	  Drukqs 
-      </p>
+  		<div class="btn-group-vertical" data-toggle="buttons">
+ 			<label class="btn btn-primary">
+		    <input type="radio" name="options" id="option1"> Come to Daddy
+			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option2"> Drukqs
+  			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option3"> Ventolin
+  			</label>
+		</div>
     </div>
+    
     <div class="tab-pane" id="tabBoardsOfCanada">
-      <p>BOC Reviews...</p>
+        	<div class="btn-group-vertical" data-toggle="buttons">
+ 			<label class="btn btn-primary">
+		    <input type="radio" name="options" id="option4"> Geodaddi
+			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option5"> Music has the right to children
+  			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option6"> Tomorrow's Harvest
+  			</label>
+			</div>
     </div>
+    
 	<div class="tab-pane" id="tabSigurRos">
-      <p>Sigur Ros Reviews...</p>
+        	<div class="btn-group-vertical" data-toggle="buttons">
+ 			<label class="btn btn-primary">
+		    <input type="radio" name="options" id="option4"> SR1
+			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option5"> SR2
+  			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option6"> SR3
+  			</label>
+			</div>
     </div>
     <div class="tab-pane" id="tabTomWaits">
-      <p>Tom Waits Reviews...</p>
+        	<div class="btn-group-vertical" data-toggle="buttons">
+ 			<label class="btn btn-primary">
+		    <input type="radio" name="options" id="option4"> TW1
+			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option5"> TW2
+  			</label>
+  			<label class="btn btn-primary">
+    		<input type="radio" name="options" id="option6"> TW3
+  			</label>
+			</div>
     </div>
     
   </div>
@@ -92,7 +155,16 @@
 
 
 
+
+
+
+
+
+
+
             <hr>
+
+			<p><IMG class="displayed" src="img/About.jpg"></p></a>
 
             <footer>
                 <p>&copy; SubstanceXStyle 2013</p>
