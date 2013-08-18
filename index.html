@@ -53,6 +53,7 @@
         <!-- This is the rectangle canvas-->
         <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> 
         
+		<!-- original clean button code <button type="button" name="" value="" class="css3button">submit</button> -->
 
         <hr>
 
@@ -62,43 +63,26 @@
 
                 <li><a href="#tabBoardsOfCanada" data-toggle="tab">Boards of Canada</a></li>
 
-                <li><a href="#tabSigurRos" data-toggle="tab" class="chris">Sigur Ros</a></li>
-
-                <li><a href="#tabTomWaits" data-toggle="tab">Tom Waits</a></li>
             </ul>
 
             <div class="tab-content">
                 <div class="tab-pane active" id="tabAphexTwin">
-                    <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn"><input type="button" name="options" id="option1" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)"> Come to Daddy</label> 
-                        <label class="btn"><input type="button" name="options" id="option2" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)"> Drukqs</label> 
-                        <label class="btn"><input type="button" name="options" id="option3" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)"> Ventolin</label>
+                    <div class="btn-group-vertical">
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)">Come to Daddy</button></label> 
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)"> Drukqs</button></label> 
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)"> Ventolin</button></label>
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(50,500)">SAW</button></label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabBoardsOfCanada">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn"><input type="button" name="options" id="option4" onmousedown="clearRectangle()" onclick="drawRectangle(100,200)"> Geodaddi</label> 
-                        <label class="btn"><input type="button" name="options" id="option5" onmousedown="clearRectangle()" onclick="drawRectangle(900,800)"> Music has the right to children</label> 
-                        <label class="btn"><input type="button" name="options" id="option6" onmousedown="clearRectangle()" onclick="drawRectangle(300,300)"> Tomorrow's Harvest</label>
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)">Geodaddi</button></label> 
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)">Music has the Right to Children</button></label> 
+                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)">Tomorrow's Harvest</button></label>
                     </div>
                 </div>
 
-                <div class="tab-pane" id="tabSigurRos">
-                    <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> SR1</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option5"> SR2</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option6"> SR3</label>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="tabTomWaits">
-                    <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> TW1</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option5"> TW2</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option6"> TW3</label>
-                    </div>
-                </div>
             </div>
         </div>
         <hr>

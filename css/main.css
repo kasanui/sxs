@@ -23,6 +23,41 @@ IMG.displayed {
 	margin-right:auto;
 }
 
+
+button.css3button {
+	font-family: 'Habibi', sans-serif;
+	font-size: 14px;
+	color: #000000;
+	padding: 5px 10px;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#ffffff);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		to(#ffffff));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #ffffff;
+	-moz-box-shadow:
+		0px 1px 3px rgba(255,255,255,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(255,255,255,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	box-shadow:
+		0px 1px 3px rgba(255,255,255,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(255,255,255,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
+
+
 .nav {
 	float:right;
 }
