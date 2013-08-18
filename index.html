@@ -2,186 +2,126 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<!--[if gt IE 8]><!-->
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <style type="text/css">
+        body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript">
+</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+</script>
+    <script type="text/javascript">
+                    $(document).ready(function() {
+                          });
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
+</head>
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script type="text/javascript">
-                        $(document).ready(function() {
-                	      });
-    	 </script>
-        
-        
-        <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<body>
+    <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+    <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+    <!--header-->
 
-		<!--header-->
-        <div class="row">
-			<p><IMG class="displayed" src="img/SxSHead.png" width="1000"></p></a>
-        </div>
+    <div class="row">
+        <p><img class="displayed" src="img/SxSHead.png" width="1000"></p>
+    </div>
 
-
-        <div class="container">
-                
+    <div class="container">
         <!-- This is the rectangle canvas-->
-    		<canvas id="DrawRectangle" class="nav" width="600" height="600"
-				style="border:0px solid #000000;" >
-			</canvas>
+         <canvas id="DrawRectangle" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> <!-- This is the clear button -->
 
-        <!-- This is the clear button -->
-			<div id="buttons">
-      		<input type="button" id="clear" value="Clear">
-    		</div>
+        <div id="buttons">
+            <input type="button" id="clear" value="Clear">
+        </div><!--This draws the rectangle-->
+        <script type="text/javascript">
+        
+                var c=document.getElementById("DrawRectangle");
+                var ctx=c.getContext("2d");
+                    ctx.fillStyle="#000000";
+                    ctx.fillRect(0,0,0,0);
 
-		<!--This draws the rectangle-->
-			<script>				
-				var c=document.getElementById("DrawRectangle");
-				var ctx=c.getContext("2d");
-					ctx.fillStyle="#000000";
-					ctx.fillRect(0,0,0,0);
-   
                  // This should clear it when the clear button is hit... 
-                 //Preferably I'd have the 'clear' Id attached to the album buttons so that will be the next step -->			
-			   		document.getElementById('clear').addEventListener('click', function() {
-		 			context.clearRect(0, 0, canvas.width, canvas.height);
-						}, false);	
-			</script>
-	
-		
- <hr>
+                 //Preferably I'd have the 'clear' Id attached to the album buttons so that will be the next step -->           
+                    document.getElementById('clear').addEventListener('click', function() {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                        }, false);  
+        </script>
+        <hr>
 
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tabAphexTwin" data-toggle="tab">Aphex Twin</a></li>
 
-<div class="tabbable tabs-left">
-  <ul class="nav nav-tabs">
-  
-	<li class="active"> <a href="#tabAphexTwin" data-toggle="tab" >Aphex Twin</a></li>
-  	<li><a href="#tabBoardsOfCanada" data-toggle="tab">Boards of Canada</a></li>
-  	<li><a href="#tabSigurRos" data-toggle="tab" class="chris">Sigur Ros</a></li>
-  	<li><a href="#tabTomWaits" data-toggle="tab">Tom Waits</a></li>
+                <li><a href="#tabBoardsOfCanada" data-toggle="tab">Boards of Canada</a></li>
 
+                <li><a href="#tabSigurRos" data-toggle="tab" class="chris">Sigur Ros</a></li>
 
+                <li><a href="#tabTomWaits" data-toggle="tab">Tom Waits</a></li>
+            </ul>
 
+            <div class="tab-content">
+                <div class="tab-pane active" id="tabAphexTwin">
+                    <div class="btn-group-vertical" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="button" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy</label> <label class="btn btn-primary"><input type="button" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs</label> <label class="btn btn-primary"><input type="button" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin</label>
+                    </div>
+                </div>
 
+                <div class="tab-pane" id="tabBoardsOfCanada">
+                    <div class="btn-group-vertical" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4" onclick="DrawRectangle(ctx.fillRect(0,0,100,200))"> Geodaddi</label> <label class="btn btn-primary"><input type="radio" name="options" id="option5" onclick="DrawRectangle(ctx.fillRect(0,0,900,800))"> Music has the right to children</label> <label class="btn btn-primary"><input type="radio" name="options" id="option6" onclick="DrawRectangle(ctx.fillRect(0,0,300,300))"> Tomorrow's Harvest</label>
+                    </div>
+                </div>
 
-  </ul>
-  <div class="tab-content">
-   <div class="tab-pane active" id="tabAphexTwin">
-  		<div class="btn-group-vertical" data-toggle="buttons">
- 			<label class="btn btn-primary">
-		    <input type="button" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy
-			</label>
-  			<label class="btn btn-primary">
-    		<input type="button" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs
-  			</label>
-  			<label class="btn btn-primary">
-    		<input type="button" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin
-  			</label>
-		</div>
-    </div>
-    
-    <div class="tab-pane" id="tabBoardsOfCanada">
-        	<div class="btn-group-vertical" data-toggle="buttons">
- 			<label class="btn btn-primary">
-		    <input type="radio" name="options" id="option4" onclick="DrawRectangle(ctx.fillRect(0,0,100,200))"> Geodaddi
-			</label>
-  			<label class="btn btn-primary">
-    		<input type="radio" name="options" id="option5" onclick="DrawRectangle(ctx.fillRect(0,0,900,800))"> Music has the right to children
-  			</label>
-  			<label class="btn btn-primary">
-    		<input type="radio" name="options" id="option6" onclick="DrawRectangle(ctx.fillRect(0,0,300,300))"> Tomorrow's Harvest
-  			</label>
-			</div>
-    </div>
-    
-	<div class="tab-pane" id="tabSigurRos">
-        	<div class="btn-group-vertical" data-toggle="buttons">
- 			<label class="btn btn-primary">
-		    <input type="radio" name="options" id="option4"> SR1
-			</label>
-  			<label class="btn btn-primary">
-    		<input type="radio" name="options" id="option5"> SR2
-  			</label>
-  			<label class="btn btn-primary">
-    		<input type="radio" name="options" id="option6"> SR3
-  			</label>
-			</div>
-    </div>
-    <div class="tab-pane" id="tabTomWaits">
-        	<div class="btn-group-vertical" data-toggle="buttons">
- 			<label class="btn btn-primary">
-		    <input type="radio" name="options" id="option4"> TW1
-			</label>
-  			<label class="btn btn-primary">
-    		<input type="radio" name="options" id="option5"> TW2
-  			</label>
-  			<label class="btn btn-primary">
-    		<input type="radio" name="options" id="option6"> TW3
-  			</label>
-			</div>
-    </div>
-    
-  </div>
+                <div class="tab-pane" id="tabSigurRos">
+                    <div class="btn-group-vertical" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> SR1</label> <label class="btn btn-primary"><input type="radio" name="options" id="option5"> SR2</label> <label class="btn btn-primary"><input type="radio" name="options" id="option6"> SR3</label>
+                    </div>
+                </div>
 
-</div>
+                <div class="tab-pane" id="tabTomWaits">
+                    <div class="btn-group-vertical" data-toggle="buttons">
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> TW1</label> <label class="btn btn-primary"><input type="radio" name="options" id="option5"> TW2</label> <label class="btn btn-primary"><input type="radio" name="options" id="option6"> TW3</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
 
+        <p><img class="displayed" src="img/About.jpg"></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-            <hr>
-
-			<p><IMG class="displayed" src="img/About.jpg"></p></a>
-
-
-
-    <footer>
-                <p>&copy; SubstanceXStyle 2013</p>
-            </footer>
-
-        </div> <!-- /container -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        <footer>
+            <p>&copy; SubstanceXStyle 2013</p>
+        </footer>
+    </div><!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript">
+</script><script type="text/javascript">
+window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+    </script><script src="js/vendor/bootstrap.min.js" type="text/javascript">
+</script><script src="js/main.js" type="text/javascript">
+</script><script type="text/javascript">
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+    </script>
+</body>
 </html>
