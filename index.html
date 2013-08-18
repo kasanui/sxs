@@ -22,6 +22,18 @@
     <script type="text/javascript">
             $(document).ready(function() {
                           });
+                          
+			function clearRectangle() {
+                  var myCanvas = document.getElementById("RectCanvas");
+                  var rect = myCanvas.getContext("2d");
+                  rect.clearRect(0,0,1000,1000)
+				  }
+        
+        	function drawRectangle(x,y) {
+                  var myCanvas = document.getElementById("RectCanvas");
+                  var rect = myCanvas.getContext("2d");
+                  rect.fillRect(0, 0, x, y);
+				  }
     </script>
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
 </head>
@@ -39,18 +51,14 @@
 
     <div class="container">
         <!-- This is the rectangle canvas-->
-        <canvas id="DrawRectangle" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> <!-- This is the clear button -->
-
+        <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> 
+        
+        <!-- This is the clear button -->
         <div id="buttons">
-            <input type="button" id="clear" value="Clear" class="btn" onclick="DrawRectangle(ctx.clearRect(0,0,1000,1000))">
-        </div><!--This draws the rectangle-->
-        <script type="text/javascript">
+            <input type="button" id="clear" value="Clear" class="btn" onclick="clearRectangle()">
+        </div>
 
-                var c=document.getElementById("DrawRectangle");
-                var ctx=c.getContext("2d");
-                    ctx.fillStyle="#000000";
 
-        </script>
         <hr>
 
         <div class="tabbable tabs-left">
@@ -67,17 +75,17 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tabAphexTwin">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="button" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy</label> 
-                        <label class="btn btn-primary"><input type="button" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs</label> 
-                        <label class="btn btn-primary"><input type="button" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin</label>
+                        <label class="btn btn-primary"><input type="button" name="options" id="option1" onclick="drawRectangle(1000, 1000)"> Come to Daddy</label> 
+                        <label class="btn btn-primary"><input type="button" name="options" id="option2" onclick="drawRectangle(700,100)"> Drukqs</label> 
+                        <label class="btn btn-primary"><input type="button" name="options" id="option3" onclick="drawRectangle(600,200)"> Ventolin</label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabBoardsOfCanada">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4" onclick="DrawRectangle(ctx.fillRect(0,0,100,200))"> Geodaddi</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option5" onclick="DrawRectangle(ctx.fillRect(0,0,900,800))"> Music has the right to children</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option6" onclick="DrawRectangle(ctx.fillRect(0,0,300,300))"> Tomorrow's Harvest</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4" onclick="drawRectangle(100,200)"> Geodaddi</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option5" onclick="drawRectangle(900,800)"> Music has the right to children</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option6" onclick="drawRectangle(300,300)"> Tomorrow's Harvest</label>
                     </div>
                 </div>
 
