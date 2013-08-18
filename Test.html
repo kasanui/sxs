@@ -26,7 +26,18 @@
                         $(document).ready(function() {
                 	      });
     	 </script>
-        
+    	 
+        <script
+        var requestAnimationFrame =  
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        function(callback) {
+          return setTimeout(callback, 1);
+        };
+        ></script>
         
         <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
     </head>
@@ -41,43 +52,59 @@
         </div>
 
         <div class="container">
-
-
-
-
-        <var Substance  </var>
-        <var Style </var>
-        
         
         
         
         <!-- This is the rectangle -->
-    		<canvas id="DrawRectangle" class="nav" width="600" height="600"
+    		<canvas id="BlankCanvas" class="nav" width="600" height="600"
 				style="border:0px solid #000000;" >
+				Your browser isn't good enough.
 			</canvas>
 
-        <!-- This is the clear button -->
-			<div id="buttons">
-      		<input type="button" id="clear" value="Clear">
-    		</div>
 
-		<!--This draws the rectangle-->
-			<script>				
-				var c=document.getElementById("DrawRectangle");
-				var ctx=c.getContext("2d");
-					ctx.fillStyle="#000000";
-					ctx.fillRect(0,0,0,0);
-   
-                 // This should clear it when the clear button is hit... 
-                 //Preferably I'd have the 'clear' Id attached to the album buttons so that will be the next step-->			
-			   		document.getElementById('clear').addEventListener('click', function() {
-		 			context.clearRect(0, 0, canvas.width, canvas.height);
-						}, false);	
-			</script>
+
+
+		<!--This hopefullly draws the rectangle-->
+
+				
+		<script type="text/javascript">
+                        var canvas;
+                        var ctx;
+                        var x = 600;
+                        var y = 600;
+                        var WIDTH = 600;
+                        var HEIGHT = 600;
+ 
+//			function circle(x,y,r) {
+//			  ctx.beginPath();
+//			  ctx.arc(x, y, r, 0, Math.PI*2, true);
+//			  ctx.fill();
+//				}
+ 
+	               function drawShape() {
+                    	var myCanvas = document.getElementById("BlankCanvas");
+                        var ctx = myCanvas.getContext("2d");
+                        ctx.fillRect(20, 20, 100, 100);
+  
+			function clear() {
+			  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+				}
+ 
+			function init() {
+			  canvas = document.getElementById("BlankCanvas");
+			  ctx = canvas.getContext("2d");
+			  return setInterval(draw, 10);
+			   ctx.fillRect(0, 0, 100, 100);
+				}
+ 
+			function draw() {
+			  clear();
+
+			  init();
+ 
+                </script>
 	
-		
  <hr>
-
 
 <div class="tabbable tabs-left">
   <ul class="nav nav-tabs">
@@ -88,21 +115,18 @@
   	<li><a href="#tabTomWaits" data-toggle="tab">Tom Waits</a></li>
 
 
-
-
-
   </ul>
   <div class="tab-content">
    <div class="tab-pane active" id="tabAphexTwin">
-  		<div class="btn-group-vertical" data-toggle="buttons">
+  		<div class="btn-group-vertical" data-toggle="buttons-radio">
  			<label class="btn btn-primary">
-		    <input type="button" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy
+		    <input type="radio" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy
 			</label>
   			<label class="btn btn-primary">
-    		<input type="button" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs
+    		<input type="radio" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs
   			</label>
   			<label class="btn btn-primary">
-    		<input type="button" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin
+    		<input type="radio" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin
   			</label>
 		</div>
     </div>
@@ -149,7 +173,8 @@
     </div>
     
   </div>
-
+  
+  
 </div>
 
 
