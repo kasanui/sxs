@@ -36,22 +36,15 @@
         <![endif]-->
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
+		<!--header-->
         <div class="row">
-						<p><IMG class="displayed" src="img/SxSHead.png" width="1000"></p></a>
+			<p><IMG class="displayed" src="img/SxSHead.png" width="1000"></p></a>
         </div>
 
+
         <div class="container">
-
-
-
-
-        <var Substance  </var>
-        <var Style </var>
-        
-        
-        
-        
-        <!-- This is the rectangle -->
+                
+        <!-- This is the rectangle canvas-->
     		<canvas id="DrawRectangle" class="nav" width="600" height="600"
 				style="border:0px solid #000000;" >
 			</canvas>
@@ -69,7 +62,7 @@
 					ctx.fillRect(0,0,0,0);
    
                  // This should clear it when the clear button is hit... 
-                 //Preferably I'd have the 'clear' Id attached to the album buttons so that will be the next step-->			
+                 //Preferably I'd have the 'clear' Id attached to the album buttons so that will be the next step -->			
 			   		document.getElementById('clear').addEventListener('click', function() {
 		 			context.clearRect(0, 0, canvas.width, canvas.height);
 						}, false);	
