@@ -17,12 +17,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript">
-</script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
-</script>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript">
-                $(document).ready(function() {
+            $(document).ready(function() {
                           });
     </script>
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
@@ -44,20 +42,14 @@
         <canvas id="DrawRectangle" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> <!-- This is the clear button -->
 
         <div id="buttons">
-            <input type="button" id="clear" value="Clear">
+            <input type="button" id="clear" value="Clear" class="btn" onclick="DrawRectangle(ctx.clearRect(0,0,1000,1000))">
         </div><!--This draws the rectangle-->
         <script type="text/javascript">
 
                 var c=document.getElementById("DrawRectangle");
                 var ctx=c.getContext("2d");
                     ctx.fillStyle="#000000";
-                    ctx.fillRect(0,0,0,0);
 
-                 // This should clear it when the clear button is hit... 
-                 //Preferably I'd have the 'clear' Id attached to the album buttons so that will be the next step -->           
-                    document.getElementById('clear').addEventListener('click', function() {
-                    context.clearRect(0, 0, canvas.width, canvas.height);
-                        }, false);  
         </script>
         <hr>
 
@@ -75,25 +67,33 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tabAphexTwin">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="button" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy</label> <label class="btn btn-primary"><input type="button" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs</label> <label class="btn btn-primary"><input type="button" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin</label>
+                        <label class="btn btn-primary"><input type="button" name="options" id="option1" onclick="DrawRectangle(ctx.fillRect(0,0,200,400))"> Come to Daddy</label> 
+                        <label class="btn btn-primary"><input type="button" name="options" id="option2" onclick="DrawRectangle(ctx.fillRect(0,0,700,100))"> Drukqs</label> 
+                        <label class="btn btn-primary"><input type="button" name="options" id="option3" onclick="DrawRectangle(ctx.fillRect(0,0,600,200))"> Ventolin</label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabBoardsOfCanada">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4" onclick="DrawRectangle(ctx.fillRect(0,0,100,200))"> Geodaddi</label> <label class="btn btn-primary"><input type="radio" name="options" id="option5" onclick="DrawRectangle(ctx.fillRect(0,0,900,800))"> Music has the right to children</label> <label class="btn btn-primary"><input type="radio" name="options" id="option6" onclick="DrawRectangle(ctx.fillRect(0,0,300,300))"> Tomorrow's Harvest</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4" onclick="DrawRectangle(ctx.fillRect(0,0,100,200))"> Geodaddi</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option5" onclick="DrawRectangle(ctx.fillRect(0,0,900,800))"> Music has the right to children</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option6" onclick="DrawRectangle(ctx.fillRect(0,0,300,300))"> Tomorrow's Harvest</label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabSigurRos">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> SR1</label> <label class="btn btn-primary"><input type="radio" name="options" id="option5"> SR2</label> <label class="btn btn-primary"><input type="radio" name="options" id="option6"> SR3</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> SR1</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option5"> SR2</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option6"> SR3</label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabTomWaits">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> TW1</label> <label class="btn btn-primary"><input type="radio" name="options" id="option5"> TW2</label> <label class="btn btn-primary"><input type="radio" name="options" id="option6"> TW3</label>
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option4"> TW1</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option5"> TW2</label> 
+                        <label class="btn btn-primary"><input type="radio" name="options" id="option6"> TW3</label>
                     </div>
                 </div>
             </div>
@@ -107,12 +107,16 @@
         </footer>
     </div><!-- /container -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript">
-</script><script type="text/javascript">
-window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
-    </script><script src="js/vendor/bootstrap.min.js" type="text/javascript">
-</script><script src="js/main.js" type="text/javascript">
-</script><script type="text/javascript">
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	</script>
+	<script type="text/javascript">
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/bootstrap.min.js" type="text/javascript">
+	</script>
+	<script src="js/main.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
