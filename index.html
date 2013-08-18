@@ -53,11 +53,6 @@
         <!-- This is the rectangle canvas-->
         <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> 
         
-        <!-- This is the clear button -->
-        <div id="buttons">
-            <input type="button" id="clear" value="Clear" class="btn" onclick="clearRectangle()">
-        </div>
-
 
         <hr>
 
@@ -75,17 +70,17 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tabAphexTwin">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="button" name="options" id="option1" onclick="drawRectangle(1000, 1000)"> Come to Daddy</label> 
-                        <label class="btn btn-primary"><input type="button" name="options" id="option2" onclick="drawRectangle(700,100)"> Drukqs</label> 
-                        <label class="btn btn-primary"><input type="button" name="options" id="option3" onclick="drawRectangle(600,200)"> Ventolin</label>
+                        <label class="btn"><input type="button" name="options" id="option1" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)"> Come to Daddy</label> 
+                        <label class="btn"><input type="button" name="options" id="option2" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)"> Drukqs</label> 
+                        <label class="btn"><input type="button" name="options" id="option3" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)"> Ventolin</label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabBoardsOfCanada">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option4" onclick="drawRectangle(100,200)"> Geodaddi</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option5" onclick="drawRectangle(900,800)"> Music has the right to children</label> 
-                        <label class="btn btn-primary"><input type="radio" name="options" id="option6" onclick="drawRectangle(300,300)"> Tomorrow's Harvest</label>
+                        <label class="btn"><input type="button" name="options" id="option4" onmousedown="clearRectangle()" onclick="drawRectangle(100,200)"> Geodaddi</label> 
+                        <label class="btn"><input type="button" name="options" id="option5" onmousedown="clearRectangle()" onclick="drawRectangle(900,800)"> Music has the right to children</label> 
+                        <label class="btn"><input type="button" name="options" id="option6" onmousedown="clearRectangle()" onclick="drawRectangle(300,300)"> Tomorrow's Harvest</label>
                     </div>
                 </div>
 
@@ -108,7 +103,6 @@
         </div>
         <hr>
 
-        <p><img class="displayed" src="img/About.jpg"></p>
 
         <footer>
             <p>&copy; SubstanceXStyle 2013</p>
