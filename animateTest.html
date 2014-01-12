@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="http://www.html5canvastutorials.com/libraries/kinetic-v5.0.0-beta.js"></script>
+    <script defer="defer">
+      var stage = new Kinetic.Stage({
+        container: 'container',
+        width: 600,
+        height: 600
+      });
+      var layer = new Kinetic.Layer();
+
+      /*
+       * leave center point positioned
+       * at the default which is at the center
+       * of the hexagon
+       */
+      var rect = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: 600,
+        height: 600,
+        fill: '#000000',
+      });
+
+      layer.add(rect);
+
+      stage.add(layer);
+
+      var period = 1000;
+
+      var anim = new Kinetic.Animation(function(frame) {
+        var scale = Math.sin(frame.time * 2 / period) + 0.001;
+        // scale x and y
+        rect.scale({x:scale,y:scale});
+
+      }, layer);
+
+      anim.start();
+    </script>
+  </body>
+</html>

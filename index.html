@@ -34,6 +34,24 @@
                   var rect = myCanvas.getContext("2d");
                   rect.fillRect(0, 0, x, y);
 				  }
+				  
+			function animateRect(x,y) {
+				  mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+				  var myCanvas = document.getElementById("RectCanvas");
+				  var rect = myCanvas.getContext("2d");
+				  var requestAnimationFrame = window.requestAnimationFrame || 
+							window.mozRequestAnimationFrame || 
+							window.webkitRequestAnimationFrame || 
+							window.msRequestAnimationFrame;
+
+				  
+				drawRectangle(x,y)
+				 
+				 requestAnimationFrame(animateRect);
+				 
+				  }
+			
+			
     </script>
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
 </head>
@@ -51,12 +69,12 @@
 
     <div class="container">
         <!-- This is the rectangle canvas-->
-        <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> 
-        
+        <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:0px; solid #000000;width: 600px; height: 400px;">
+        </canvas> 
+
 		<!-- original clean button code <button type="button" name="" value="" class="css3button">submit</button> -->
 
-        <hr>
-
+        <hr> 
         <div class="tabbable tabs-left">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tabAphexTwin" data-toggle="tab">Aphex Twin</a></li>
@@ -68,10 +86,10 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tabAphexTwin">
                     <div class="btn-group-vertical">
-                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)">Come to Daddy</button></label> 
-                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)"> Drukqs</button></label> 
-                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)"> Ventolin</button></label>
-                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(50,500)">SAW</button></label>
+                        <label class="btn"><button class="css3button" onclick="animateRect(1000, 1000)">Come to Daddy</button></label> 
+                        <label class="btn"><button class="css3button" onclick="animateRect(700,100)"> Drukqs</button></label> 
+                        <label class="btn"><button class="css3button" onclick="animateRect(600,200)"> Ventolin</button></label>
+                        <label class="btn"><button class="css3button" onclick="animateRect(50,500)">SAW</button></label>
                     </div>
                 </div>
 
