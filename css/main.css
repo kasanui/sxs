@@ -61,3 +61,10 @@ button.css3button {
 .nav {
 	float:right;
 }
+
+#RectCanvas {
+
+	height: 100px;
+	width: 100px;
+	
+}

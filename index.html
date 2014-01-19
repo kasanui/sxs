@@ -25,16 +25,17 @@
     $(document).ready(function() {
                           });
                           
-            function clearRectangle() {
-                  var myCanvas = document.getElementById("RectCanvas");
-                  var rect = myCanvas.getContext("2d");
-                  rect.clearRect(0,0,1000,1000)
-                  }
+
         
             function drawRectangle(x,y) {
-                  var myCanvas = document.getElementById("RectCanvas");
-                  var rect = myCanvas.getContext("2d");
-                  rect.fillRect(0, 0, x, y);
+                  
+                    $( "#RectCanvas" ).animate({
+    width: x,
+    height: y
+
+   
+  }, 1500 );
+  
                   }
     </script>
     <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
@@ -53,7 +54,7 @@
 
     <div class="container">
         <!-- This is the rectangle canvas-->
-        <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:0px solid #000000;"></canvas> <!-- original clean button code <button type="button" name="" value="" class="css3button">submit</button> -->
+        <canvas id="RectCanvas" class="nav" width="600" height="600" style="border:1px solid #000000;"></canvas> <!-- original clean button code <button type="button" name="" value="" class="css3button">submit</button> -->
         <hr>
 
         <div class="tabbable tabs-left">
@@ -66,13 +67,13 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tabAphexTwin">
                     <div class="btn-group-vertical">
-                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)"><label class="btn"><label class="btn">Come to Daddy</label></label></button></label> <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)"><label class="btn"><label class="btn">Drukqs</label></label></button></label> <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)"><label class="btn"><label class="btn">Ventolin</label></label></button></label> <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(50,500)"><label class="btn"><label class="btn">SAW</label></label></button></label>
+                        <label class="btn"><button class="css3button" onclick="drawRectangle(1000, 1000)"><label class="btn"><label class="btn">Come to Daddy</label></label></button></label> <label class="btn"><button class="css3button" onclick="drawRectangle(700,100)"><label class="btn"><label class="btn">Drukqs</label></label></button></label> <label class="btn"><button class="css3button" onclick="drawRectangle(600,200)"><label class="btn"><label class="btn">Ventolin</label></label></button></label> <label class="btn"><button class="css3button" onclick="drawRectangle(50,500)"><label class="btn"><label class="btn">SAW</label></label></button></label>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="tabBoardsOfCanada">
                     <div class="btn-group-vertical" data-toggle="buttons">
-                        <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(1000, 1000)"><label class="btn"><label class="btn">Geodaddi</label></label></button></label> <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(700,100)"><label class="btn"><label class="btn">Music has the Right to Children</label></label></button></label> <label class="btn"><button class="css3button" onmousedown="clearRectangle()" onclick="drawRectangle(600,200)"><label class="btn"><label class="btn">Tomorrow's Harvest</label></label></button></label>
+                        <label class="btn"><button class="css3button" onclick="drawRectangle(1000, 1000)"><label class="btn"><label class="btn">Geodaddi</label></label></button></label> <label class="btn"><button class="css3button" onclick="drawRectangle(700,100)"><label class="btn"><label class="btn">Music has the Right to Children</label></label></button></label> <label class="btn"><button class="css3button" onclick="drawRectangle(600,200)"><label class="btn"><label class="btn">Tomorrow's Harvest</label></label></button></label>
                     </div>
                 </div>
             </div>
